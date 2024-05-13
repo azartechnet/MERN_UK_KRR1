@@ -1,0 +1,32 @@
+<!--
+    order
+    flex-grow
+    flex-shrink
+    align-self
+-->
+
+<style>
+    .flex-container
+    {
+        display: flex;
+        align-items: stretch;
+        background-color: #f1f1f1;
+    }
+    .flex-container>div
+    {
+        background-color: aqua;
+        color: white;
+        width: 100px;
+        margin: 5px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+</style>
+
+<div class="flex-container">
+   <div style="order: 3">1</div>
+   <div style="order: 2">2</div>
+   <div style="order: 3">3</div>
+   <div style="order: 1">4</div>
+</div>
