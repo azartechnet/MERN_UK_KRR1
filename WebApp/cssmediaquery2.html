@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example
+        {
+            padding: 20px;
+            color: white;
+        }
+        @media only screen and (max-width:600px)
+        {
+            .example{
+                background-color: red;
+            }
+        }
+        @media only screen and (min-width:600px)
+        {
+            .example
+            {
+                background-color: green;
+            }
+        }
+        @media only screen and (min-width:768px)
+        {
+            .example
+            {
+                background-color: blue;
+            }
+        }
+        @media only screen and (min-width:1200px)
+        {
+            .example{
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="example">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Temporibus velit nulla repellat, officiis maxime excepturi 
+        dolor maiores dicta inventore ipsam iusto facere quae sit dolorem, 
+        repudiandae molestias accusamus? Rerum, qui!</p>
+</body>
+</html>
