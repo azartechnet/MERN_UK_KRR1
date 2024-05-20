@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            h1
+            {
+                width: 350px;
+                animation-name: text;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                background-color: rgb(255,210,85);
+            }
+            #one
+            {
+                animation-timing-function: ease;
+            }
+            #two
+            {
+                animation-timing-function: ease-in;
+            }
+            #three
+            {
+                animation-timing-function: ease-in-out;
+            }
+            #four
+            {
+                animation-timing-function: ease-out;
+            }
+            #five
+            {
+                animation-timing-function: step-end;
+            }
+            @keyframes text
+            {
+                from
+                {
+                    margin-left: 60%;
+                }
+                to
+                {
+                    margin-left: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="one">welcome</h1>
+        <h1 id="two">welcome</h1>
+        <h1 id="three">welcome</h1>
+        <h1 id="four">welcome</h1>
+        <h1 id="five">welcome</h1>
+    </body>
+</html>

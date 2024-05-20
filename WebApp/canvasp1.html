@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <canvas id="my1" width="200" height="100" style="border: 1px solid;"></canvas>
+        <script>
+            const canvas=document.getElementById("my1")
+            const ctx=canvas.getContext('2d')
+            let rect={
+                x:35,
+                y:10,
+                w:100,
+                h:100
+            }
+            ctx.fillStyle='blue'
+            ctx.fillRect(rect.x,rect.y,rect.w,rect.h)
+        </script>
+    </body>
+</html>
