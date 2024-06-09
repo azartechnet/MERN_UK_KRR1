@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .example
+            {
+                color: blue;
+            }
+            #unique
+            {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="example">First Elements</div>
+        <div id="unique">Second Elements</div>
+        <p class="example">FirstPara</p>
+        <p>SecondPara</p>
+        <script>
+            var firstElmement=document.querySelectorAll('.example');
+             firstElmement.forEach(function(element){
+                console.log('Element::',element.textContent)
+             })
+            
+        </script>
+    </body>
+</html>
