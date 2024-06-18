@@ -1,0 +1,21 @@
+<p id="d1"></p>
+<script>
+    const empid=[10,30,18,35,56,88]
+    //const empname=["azar","mohamed","azar","mohan"]
+    //console.log(empname.indexOf("azar"))
+    // console.log(empname.includes("azar"))
+    // console.log(empname.join("-"))
+    // console.log(empname.slice(1,3))
+    // console.log(empname.splice(1,2,"senthil"))
+    // console.log(empname)
+    //console.log(empname.lastIndexOf('azar'))
+    let f1=empid.find(myfun)
+
+    document.getElementById("d1").innerHTML="First Number over is::"+f1;
+    function myfun(value)
+    {
+        return value>18
+    }
+    
+
+</script>

@@ -1,5 +1,26 @@
 <p id="d1"></p>
 <script>
     const f1=["a1","a2","a3","a4"]
-    document.getElementById("d1").innerHTML=f1.toString();
+    const f2=["b1","b2","b3","b4"]
+    //document.getElementById("d1").innerHTML=f1.toString();
+    //document.getElementById('d1').innerHTML=f1.at(2);
+    // document.getElementById('d1').innerHTML=f1.pop()
+    // document.write("After deleting the elements::",f1)
+    // f1.push("azar")
+    // document.write("After adding the elements::",f1)
+
+    // f1.shift()
+    // document.write("After deleting the first element::",f1)
+    // f1.unshift("a1")
+    // document.write("After adding the first element::",f1)
+
+    // delete f1[0]
+    // document.write("After deleting the first element::",f1)
+
+    // const my=f1.concat(f2)
+    // document.write("After concatenating the two arrays::",my)
+
+    f1.copyWithin(2,0)
+
+     document.write("After copying the elements::",f1)
 </script>
