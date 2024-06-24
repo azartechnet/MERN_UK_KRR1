@@ -1,7 +1,7 @@
 <script>
     //Array Iteration
 
-     const n1=[10,20,1,30,40,50]
+    //  const n1=[10,20,1,30,40,50]
 
      //for each
     //  n1.forEach((value,index)=>{
@@ -16,10 +16,10 @@
 
     //filter
 
-     const n3=n1.filter((value)=>{
-        // return value>20
-        console.log("Filter is::",value>20)
-        })
+    //  const n3=n1.filter((value)=>{
+    //     // return value>20
+    //     console.log("Filter is::",value>20)
+    //     })
     
     //reduce
 
@@ -27,6 +27,16 @@
     //     return acc+curr
     //     },0)
     
-    
+    //keys
+    const n1=[10,20,1,30,40,50]
+    for(let key of n1.keys()){
+        console.log("keys"+key)
+        }
+        for(let values of n1.values()){
+        console.log("values"+values)
+        }
+        for(let [key,values] of n1.entries()){
+            console.log("entries"+key+" "+values)
+            }
      
 </script>

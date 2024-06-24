@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        Enter the username:<input type="text" id="fname" onblur="myfun()"/>
+        <script>
+            function myfun(){
+                var x=document.getElementById("fname").value;
+                if(x.length<5){
+                    alert("username should be at least 5 characters");
+                    }
+                    // if(x==""){
+                    // alert("Please Enter Your Name");
+                    // }
+                    // else{
+                    //     alert("Welcome "+x);
+                    //     }
+                   }
+        </script>
+    </body>
+</html>
