@@ -1,0 +1,20 @@
+<body>
+    <input id="numb">
+    <button id="btn" type="button" onclick="myfun()">Click</button>
+    <p id="d1"></p>
+    <script>
+        function myfun() {
+            let x=document.getElementById("numb").value;
+            let text;
+            if(isNaN(x)||x<1||x>10)
+            {
+                text="Invalid Input";
+            }
+            else
+            {
+                text="Valid Input";
+            }
+            document.getElementById("d1").innerHTML=text;
+        }
+    </script>
+</body>
