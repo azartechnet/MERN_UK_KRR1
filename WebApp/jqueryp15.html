@@ -1,0 +1,16 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("button").click(function(){
+            $("#div1").fadeTo("slow",0.15);
+            $("#div2").fadeTo("slow",0.6);
+            $("#div3").fadeTo("slow",0.5);
+        })
+        });
+</script>
+<button>ClickHere</button>
+<div id="div1" style="width:80px;height: 80px;background-color: red;">This is Div1</div>
+<div id="div2" style="width:80px;height: 80px;background-color:blue;">This is Div2</div>
+<div id="div3" style="width:80px;height: 80px;background-color:green;">This is Div3</div>
+
