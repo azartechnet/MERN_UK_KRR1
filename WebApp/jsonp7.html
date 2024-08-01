@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="d1"></p>
+        <script>
+            //Storing data
+            const myobj={name:"mohamed",age:31,city:"nkl"}
+            const myjson=JSON.stringify(myobj)
+            localStorage.setItem("myjson",myjson)
+
+            //Retrieving data
+            const myjson2=localStorage.getItem("myjson")
+            const myobj2=JSON.parse(myjson2)
+            document.getElementById("d1").innerHTML=myobj2.name;
+        </script>
+    </body>
+</html>
