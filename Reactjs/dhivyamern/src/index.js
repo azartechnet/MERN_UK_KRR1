@@ -105,7 +105,7 @@ r1.render(<Myelem/>)*/
 
 //React Conditional Rendering
 
-const x=100
+/*const x=100
 let text=""
 if(x>10){
   text="Greater than 10"
@@ -123,5 +123,88 @@ else{
     )
   }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Myelem/>)
+r1.render(<Myelem/>)*/
 
+//Function Component
+
+/*function Sample(props)
+{
+   return(
+    <div>
+      <h1>Welcome{props.name}</h1>
+    </div>
+   )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name="azar"/>)*/
+
+/*function Sample(props)
+{
+  return(
+    <>
+      <h1>Welcome to Function</h1>
+      <h2>{props.name}</h2>
+      <h3>{props.age}</h3>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name={"azar"} age={"25"}/>)  //Passing props to*/
+
+/*class Sample extends React.Component
+{
+   render()
+   {
+    return(
+      <>
+        <h1>Welcome to the class component</h1>
+      </>
+    )
+   }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//Component in Component
+
+/*function Sample()
+{
+  return(
+    <>
+    <h1>I am a Sample!!</h1>
+    </>
+  )
+}
+function Sample2()
+{
+  return(
+    <>
+    This is Sample2
+    <Sample/>
+    </>
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample2/>)*/
+
+//Component with Files
+
+/*import './index.css';
+
+function Sample()
+{
+  return(
+    <h1>Welcome</h1>
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+import Emp from "./App";
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Emp/>)
