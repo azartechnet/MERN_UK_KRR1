@@ -204,7 +204,207 @@ function Sample()
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Sample/>)*/
 
-import Emp from "./App";
+/*import Emp from "./App";
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Emp/>)
+r1.render(<Emp/>)*/
+
+//Conditional Rendering
+
+//Else if ladder
+
+/*const Gradesystem=()=>{
+  let marks=80;
+  if(marks>=90)
+  {
+    return <h1>Grade A</h1>
+  }
+  else if(marks>=80)
+  {
+    return <h1>Grade B</h1>
+    }
+    else if(marks>=70)
+    {
+      return<h1>Grade C</h1>
+    }
+    else
+    {
+       return<h1>Grade D</h1>
+    }
+    // return(
+    //   <div>
+    //     <h1>Grade System</h1>
+    //     <p>Enter your marks</p>
+    //     <input type="number" id="marks" />
+    //     <button onClick={Gradesystem}>Submit</button>
+        
+    //   </div>
+    // )
+    }
+   
+    const r1=ReactDOM.createRoot(document.getElementById('root'))
+    r1.render(<Gradesystem/>)*/
+
+    //Switch Statement
+    
+    /*const Getgrade=(score)=>{
+      
+      switch(true)
+      {
+         case score>=90:
+          return <h1>Grade A</h1>
+          break;
+          case score>=80:
+            return <h1>Grade B</h1>
+            break;
+            case score>=70:
+              return <h1>Grade C</h1>
+              break;
+              default:
+                return <h1>Grade D</h1>
+                }
+    }
+    const GradeComponent=()=>{
+      const score=80;
+      const grade=Getgrade(score);
+      return(
+        <div>
+          <h1>Grade System{grade}</h1>
+
+        </div>
+      )
+    }
+    const r1=ReactDOM.createRoot(document.getElementById('root'))
+    r1.render(<GradeComponent/>)*/
+
+    //Changing the state object
+
+    /*class Sample extends React.Component
+    {
+      constructor()
+      {
+        super();
+        this.state={
+          emp:{
+            name:"Rahul",
+            age:25,
+            salary:50000
+            },
+            showData:false
+        };
+      }
+      showData()
+      {
+          this.setState({showData:true})
+      }
+      hideData()
+      {
+        this.setState({showData:false})
+      }
+      render()
+      {
+        let data;
+        if(this.state.showData==true)
+        {
+          data=<div><b>City:{this.state.emp.city}</b>
+                  <b>Empname:{this.state.emp.name}</b>
+                  <b>Age:{this.state.emp.age}</b>
+                  <b>Salary:{this.state.emp.salary}</b>
+                  <button onClick={this.hideData.bind(this)}>HideData</button>
+          </div>
+        }
+        else
+        {
+           data=<div><button onClick={this.showData.bind(this)}>ShowData</button></div>
+        }
+        return(
+          <div>
+            {data}
+          </div>
+          )
+          }
+          }
+    const r1=ReactDOM.createRoot(document.getElementById('root'))
+    r1.render(<Sample/>)*/
+
+    //Using Constructor
+    /*class Sample extends React.Component
+    {
+      text="welcome"
+      constructor()
+      {
+        super();
+        this.state={f1:'red'}
+      }
+      render()
+      {
+        return(
+          <div>
+            <h1 style={{color:this.state.f1}}>Hello</h1>
+            <p>{this.text}</p>
+          </div>
+          
+        )
+      }
+    }
+    const r1=ReactDOM.createRoot(document.getElementById('root'))
+    r1.render(<Sample/>)*/
+
+    //React Event
+    /*function Football()
+    {
+      const shoot=()=>{
+        alert("Goal")
+      }
+      return(
+        <div>
+          <button onClick={shoot}>Shoot</button>
+        </div>
+        )
+    }
+    const r1=ReactDOM.createRoot(document.getElementById('root'))
+
+    r1.render(<Football/>) */
+
+    //Another Program
+
+    /*function Football()
+    {
+      const shoot=(a)=>{
+        alert("Goal Shooted"+a)
+      }
+      return(
+        <div>
+          <button onClick={()=>shoot("ByMessi")}>Shoot</button>
+        </div>
+      )
+    }
+    const r1=ReactDOM.createRoot(document.getElementById('root'))
+    r1.render(<Football/>)*/
+
+    //React List
+
+   function Car(props)
+   {
+      return<li>I am a{props.brand}</li>
+   }
+   function Garage()
+   {
+     const cars=[
+      {id:1,brand:'Ford'},
+      {id:2,brand:'Toyota'},
+      {id:3,brand:'Honda'}
+     ];
+     return(
+      <div>
+        <ul>
+          {cars.map((car)=><Car key={car.id} brand={car.brand}/>)}
+
+        </ul>
+      </div>
+     )
+   }
+   const r1=ReactDOM.createRoot(document.getElementById('root'))
+   r1.render(<Garage/>)
+
+    
