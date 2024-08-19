@@ -384,7 +384,7 @@ r1.render(<Emp/>)*/
 
     //React List
 
-   function Car(props)
+   /*function Car(props)
    {
       return<li>I am a{props.brand}</li>
    }
@@ -405,6 +405,149 @@ r1.render(<Emp/>)*/
      )
    }
    const r1=ReactDOM.createRoot(document.getElementById('root'))
-   r1.render(<Garage/>)
+   r1.render(<Garage/>)*/
+
+   //React getDerivedStateFromProps
+
+   /*class Header extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { count: 0 };
+    }
+  
+    static getDerivedStateFromProps(props, state) {
+      console.log("getDerivedStateFromProps called");
+      if (props.count !== state.count) {
+        return { count: props.count };
+      }
+      else
+      {
+        return null; 
+      }
+      // No state update needed
+    }
+  
+    render() {
+      return (
+        <div>
+          <h1>Header</h1>
+          <p>Count: {this.state.count}</p>
+        </div>
+      );
+    }
+  }
+  
+  const r1 = ReactDOM.createRoot(document.getElementById('root'));
+  
+  // Pass a 'count' prop when rendering the component
+  r1.render(<Header count={10} />);*/
+
+  //ComponentDidMount
+
+  // setTimeout executes the code only once after the specified delay, 
+//  setInterval executes the code repeatedly at the specified interval.
+//ComponentWillUnmount clears the timer when the component is about to be
+// removed from the DOM to prevent memory leaks
+
+/*class TimerComponent extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={
+      seconds:0,
+    }
+  }
+  componentDidMount()
+  {
+    console.log("componentDidMount called");
+    this.timerID = setInterval(
+      () => this.setState({ seconds: this.state.seconds + 1 }),
+      1000
+      );
+  }
+  componentWillUnmount()
+  {
+    console.log("componentWillUnmount called");
+    clearInterval(this.timerID);
+
+  }
+  render()
+  {
+     return(
+      <div>
+        <p>Time: {this.state.seconds}</p>
+
+      </div>
+     )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<TimerComponent/>)*/
+
+
+//Updating getDerviedStateFromprops
+
+/*class Header extends React.Component
+{
+   constructor(props)
+   {
+    super(props);
+    this.state={empname:"Azar"}
+}
+static getDerviedStateFromProps(props,state)
+{
+  console.log("getDerviedStateFromProps called");
+  return {empname:props.name};
+}
+changeEmployee=()=>{
+  this.setState({empname:"Rahul"})
+}
+render()
+{
+  return(
+    <div>
+      <h1>{this.state.empname}</h1>
+      <button onClick={this.changeEmployee}>Change Employee</button>
+
+    </div>
+  )
+}
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header name="Azar"/>)*/
+
+//ShouldComponentUpdate
+class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={empname:"Azar"}
+  }
+  changeEmployee=()=>{
+    this.setState({empname:"Rahul"})
+    }
+    shouldComponentUpdate(nextProps,nextState)
+    {
+      console.log("shouldComponentUpdate called");
+      return true;
+      }
+      render()
+      {
+        return(
+          <div>
+            <h1>{this.state.empname}</h1>
+            <button onClick={this.changeEmployee}>Change Employee</button>
+            </div>
+            )
+            }
+
+}
+ 
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header name="Azar"/>)
+
+
 
     
