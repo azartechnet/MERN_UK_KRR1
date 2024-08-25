@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import ReactDOM from "react-dom/client";
 
 /*const Sample=()=>{
@@ -518,7 +518,7 @@ const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Header name="Azar"/>)*/
 
 //ShouldComponentUpdate
-class Header extends React.Component
+/*class Header extends React.Component
 {
   constructor(props)
   {
@@ -546,7 +546,139 @@ class Header extends React.Component
 }
  
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header name="Azar"/>)
+r1.render(<Header name="Azar"/>)*/
+
+//React Hooks useState()
+
+/*function Counter()
+{
+  const[count,setCount]=useState(0);
+  const [name,setName]=useState("mohamed");
+  return(
+    <div>
+      <h1>Count:{count}</h1>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+      <h1>Name:{name}</h1>
+      <button onClick={()=>setName("Azar")}>Change Name</button>
+
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//React useEffect
+
+/*function Timer()
+{
+  const[count,setCount]=useState(0);
+  useEffect(()=>{
+    const intervalId=setInterval(()=>{
+      setCount(count+1);
+      },1000);
+      return()=>{
+        clearInterval(intervalId);
+        }
+        },[count]);
+        return(
+          <div>
+            <h1>Count:{count}</h1>
+            
+          </div>
+        )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Timer/>)*/
+
+//UseEffect()
+
+/*function ClickCounter()
+{
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+    document.title="You clicked "+count+" times"
+    },[count])
+    return(
+      <div>
+        <button onClick={()=>setCount(count+1)}>Click me</button>
+        <h1>Count:{count}</h1>
+      </div>
+      )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<ClickCounter/>)*/
+
+//With out useContext
+
+/*function Component1()
+{
+  const [user,setUser]=useState("mohamed");
+  return(
+    <div>
+      <h1>Component1</h1>
+      <p>User:{user}</p>
+      <Component2 user={user}/>
+    </div>
+    )
+}
+function Component2(props)
+{
+  return(
+    <div>
+      <h1>Component2</h1>
+      <p>User:{props.user}</p>
+      
+    </div>
+    )
+    }
+    const r1=ReactDOM.createRoot(document.getElementById('root'))
+    r1.render(<Component1/>)*/
+
+    //React useContext
+
+/*import { createContext, useContext } from "react";
+// Create a context
+const UserContext = createContext();
+
+function Component1() {
+  // Use context inside Component1
+  const user = useContext(UserContext);
+  return (
+    <div>
+      <h1>Component1</h1>
+      <p>User: {user}</p>
+      <Component2 />
+    </div>
+  );
+}
+
+function Component2() {
+  // Use context inside Component2
+  const user = useContext(UserContext);
+  return (
+    <div>
+      <h1>Component2</h1>
+      <p>User: {user}</p>
+    </div>
+  );
+}
+
+// Render the components
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(
+  <UserContext.Provider value={"Rahul"}>
+    <Component1 />
+  </UserContext.Provider>
+);*/
+
+//React useRef()--Task
+
+
+
+
+
 
 
 
