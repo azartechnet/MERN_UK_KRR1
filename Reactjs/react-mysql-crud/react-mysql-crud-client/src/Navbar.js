@@ -8,16 +8,20 @@ const NavigationBar = () => {
             <Navbar.Brand href="/">CRUD App</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <LinkContainer to="">
+            <Nav className="mr-auto">
+                    <LinkContainer to="/">
                         <Nav.Link>Home</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="">
+                    <LinkContainer to="/create">
                         <Nav.Link>Create Post</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/">
+                        <Nav.Link>Products</Nav.Link>
                     </LinkContainer>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
+
     );
 };
 
